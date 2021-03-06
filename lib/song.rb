@@ -12,9 +12,7 @@ class Song
   def self.column_names
     DB[:conn].results_as_hash = true
 
-    puts table_name
     sql = "pragma table_info('#{table_name}')"
-    binding.pry
 
     table_info = DB[:conn].execute(sql)
     column_names = []
