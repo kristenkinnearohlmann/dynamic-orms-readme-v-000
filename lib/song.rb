@@ -19,7 +19,7 @@ class Song
     table_info.each do |row|
       column_names << row["name"]
     end
-    binding.pry
+
     column_names.compact
   end
 
